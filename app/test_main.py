@@ -17,15 +17,46 @@ class TestGetHumanAge:
                 14,
                 14,
                 [0, 0],
-                id="Test with first boundary parameter"
-
+                id="Test with first boundary parameter 14"
+            ),
+            pytest.param(
+                15,
+                15,
+                [1, 1],
+                id="Boundary parameter 15"
+            ),
+            pytest.param(
+                23,
+                23,
+                [1, 1],
+                id="Boundary parameter 23"
+            ),
+            pytest.param(
+                24,
+                24,
+                [2, 2],
+                id="Boundary parameter 24"
+            ),
+            pytest.param(
+                27,
+                28,
+                [2, 2],
+                id="Boundary parameter cat-27, dog-28"
             ),
             pytest.param(
                 28,
-                28,
-                [3, 2],
-                id="Different human ages for equal cat/dog ages"
+                29,
+                [3, 3],
+                id="Boundary parameter cat-28, dog-29"
             ),
+
+            pytest.param(
+                3245,
+                3245,
+                [807, 646],
+                id="Gigantic Boundary parameters"
+            ),
+
             pytest.param(
                 100,
                 100,
