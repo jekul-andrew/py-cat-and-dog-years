@@ -50,6 +50,12 @@ class TestGetHumanAge:
                 id="Boundary parameter cat-28, dog-29"
             ),
             pytest.param(
+                100,
+                100,
+                [21, 17],
+                id="Boundary parameter cat/dog=100"
+            ),
+            pytest.param(
                 300,
                 300,
                 [71, 57],
