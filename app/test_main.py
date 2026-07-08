@@ -49,19 +49,11 @@ class TestGetHumanAge:
                 [3, 3],
                 id="Boundary parameter cat-28, dog-29"
             ),
-
             pytest.param(
-                3245,
-                3245,
-                [807, 646],
-                id="Gigantic Boundary parameters"
-            ),
-
-            pytest.param(
-                100,
-                100,
-                [21, 17],
-                id="Big ages for cat/dog"
+                300,
+                300,
+                [71, 57],
+                id="Big ages"
             )
         ]
     )
@@ -88,6 +80,12 @@ class TestGetHumanAge:
                 -2,
                 ValueError,
                 id="Raise ValueError if age is negative number"
+            ),
+            pytest.param(
+                500,
+                500,
+                ValueError,
+                id="Raise ValueError if age is big number"
             ),
         ]
     )
